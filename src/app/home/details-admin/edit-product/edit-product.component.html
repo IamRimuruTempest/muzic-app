@@ -1,0 +1,51 @@
+<ion-header lines="none">
+  <ion-toolbar>
+    <ion-title>Edit Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+ <ion-item>
+      <ion-label position="floating">Product Name</ion-label>
+      <ion-input [(ngModel)]="selectedProduct.productName"></ion-input>
+      <!-- [(ngModel)]="product.productName" -->
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Product Price</ion-label>
+      <ion-input [(ngModel)]="selectedProduct.productPrice"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="selectedProduct.productCategory" placeholder="Select One">
+        <ion-select-option value="headphone">Headphone</ion-select-option>
+        <ion-select-option value="earbuds">EarBuds</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Color</ion-label>
+      <ion-select [(ngModel)]="selectedProduct.productColor" placeholder="Select One">
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="white">White</ion-select-option>
+        <ion-select-option value="gray">Gray</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea [(ngModel)]="selectedProduct.productDescription" placeholder="Product Description" ></ion-textarea>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="updateProduct()" type="submit" color="danger" expand="block" > Submit</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  
+  
+
+</ion-content>

@@ -1,0 +1,64 @@
+ion-content {
+  .textInfo {
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    ion-icon {
+      font-size: 5rem;
+      color: #777b7e;
+    }
+
+    ion-icon,
+    p,
+    h4 {
+      color: #777b7e;
+    }
+  }
+
+  ion-card-content {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+  }
+
+  .img {
+    background: #f8d8db;
+    padding: 0.5rem;
+  }
+
+  ion-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .info {
+    margin-left: 1rem;
+  }
+
+  .product_name {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .product_price {
+    font-weight: 600;
+  }
+
+  .product_price,
+  .product_color,
+  .product_quantity {
+    font-size: 1rem;
+  }
+}
+
+ion-footer {
+  display: none;
+  ion-button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+}

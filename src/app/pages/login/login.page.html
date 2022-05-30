@@ -1,0 +1,54 @@
+<ion-content class="ion-padding">
+  <ion-img src="/assets/logo/Beats.jpg" alt=""></ion-img>
+  <h1>Welcome,</h1>
+  <h3>Sign in to continue!</h3>
+
+  <form
+    [formGroup]="validationForm_Group"
+    (ngSubmit)="onSubmit(validationForm_Group.value)"
+    novalidate
+  >
+    <!-- EMAIL -->
+    <ion-item lines="none">
+      <ion-label class="label_name" position="floating">Email</ion-label>
+      <ion-input
+        class="input_name"
+        formControlName="email"
+        type="text"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <!-- EMAIL -->
+    <ion-item lines="none">
+      <ion-label class="label_name" position="floating">Password</ion-label>
+      <ion-input
+        class="input_name input_password"
+        [type]="showPwd ? 'text' : 'password'"
+        formControlName="password"
+      >
+        <ion-icon
+          class="icon_eye"
+          slot="end"
+          [name]="pwdIcon"
+          (click)="togglePwd()"
+        ></ion-icon>
+      </ion-input>
+    </ion-item>
+
+    <a routerLink="www.facebook.com" class="forgot_password"
+      >Forgot Password?</a
+    >
+
+    <ion-button class="login_button" type="submit" expand="block"
+      >Login</ion-button
+    >
+    <ion-button class="google_button" type="submit" expand="block">
+      <ion-icon name="logo-google"></ion-icon> &#160; Connect with Google
+    </ion-button>
+
+    <p class="link_text">
+      I'm a new user, <a (click)="goToRegister()">&#160; Sign up</a>
+    </p>
+  </form>
+</ion-content>

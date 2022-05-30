@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-padding">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/home/product"
+        [icon]="add"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button id="add-cart">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-modal
+      trigger="add-cart"
+      [breakpoints]="[0.6, 0.8, 1]"
+      [initialBreakpoint]="0.4"
+    >
+      <ng-template>
+        <app-add-cart> </app-add-cart>
+      </ng-template>
+    </ion-modal>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <div class="product_card">
+    <div class="img_container">
+      <ion-icon class="arrow_icon" name="chevron-back-outline"></ion-icon>
+      <ion-img
+        class="img_shape"
+        src="/assets/shapes/Polygon 4.svg"
+        alt=""
+      ></ion-img>
+      <div class="img_product">
+        <ion-img [src]="product.imageUrl" alt=""></ion-img>
+        <!-- src="/assets/products/headphone-1.png" -->
+      </div>
+      <ion-icon class="arrow_icon" name="chevron-forward-outline"></ion-icon>
+    </div>
+    <div class="product_content">
+      <div class="product_rating">
+        <ion-icon name="star" class="star_icon"></ion-icon>
+        <ion-icon name="star" class="star_icon"></ion-icon>
+        <ion-icon name="star" class="star_icon"></ion-icon>
+        <ion-icon name="star" class="star_icon"></ion-icon>
+        <ion-icon name="star-outline" class="star_icon"></ion-icon>
+      </div>
+      <h3 class="product_title">{{product.productName}}</h3>
+      <h5 class="product_price">&#8369; {{product.productPrice}}</h5>
+    </div>
+    <div class="details_description">
+      <h3 class="details_title">Colors</h3>
+      <div class="details__color">
+        <div class="color__violet"></div>
+        <div class="color__blue color_small"></div>
+        <div class="color__pink"></div>
+      </div>
+      <h3 class="details_title">Details</h3>
+      <div class="details__detail">
+        <p>{{product.productDescription}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-row>
+  <ion-col class="ion-no-padding">
+    <ion-button class="buy_btn" id="add-order" expand="block"
+      >Buy Now</ion-button
+    >
+  </ion-col>
+</ion-row>
+
+<ion-modal
+  trigger="add-order"
+  [breakpoints]="[0.6, 0.8, 1]"
+  [initialBreakpoint]="0.4"
+>
+  <ng-template>
+    <!-- <app-edit-profile
+            (dismissed)="dismissModal()"
+            (submitData)="updateProfile($event)"
+          ></app-edit-profile> -->
+    <app-add-order> </app-add-order>
+  </ng-template>
+</ion-modal>

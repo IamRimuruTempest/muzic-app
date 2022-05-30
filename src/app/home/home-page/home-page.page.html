@@ -1,0 +1,97 @@
+<ion-header class="ion-no-border ion-no-padding">
+  <ion-toolbar class="ion-no-padding">
+    <!-- <ion-title slot="start">Home</ion-title> -->
+    <ion-icon class="menu_icon" slot="start" name="menu"></ion-icon>
+    <ion-icon class="notification_icon" slot="end" name="notifications-sharp"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding">
+  <h3>{{greet}},</h3>
+  <h1>{{account.userFirstname}} {{account.userLastname}}</h1>
+
+  <swiper class="swiper" [autoplay]="true" [keyboard]="true" [pagination]="true" [zoom]="true">
+    <ng-template swiperSlide>
+      <ion-img  src="/assets/banner/banner 1.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img src="/assets/banner/banner 2.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img src="/assets/banner/banner 3.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img  src="/assets/banner/banner 4.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img  src="/assets/banner/banner 5.jpg" alt=""></ion-img>
+    </ng-template>
+  </swiper>
+
+  <swiper [slidesPerView]="2" [spaceBetween]="10">
+     <ng-template swiperSlide>
+       <ion-img  src="/assets/banner/banner 6.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-img src="/assets/banner/banner 7.jpg" alt=""></ion-img>
+    </ng-template>
+    <ng-template swiperSlide>
+       <ion-img src="/assets/banner/banner 9.jpg" alt=""></ion-img>
+    </ng-template>
+  </swiper>
+
+
+  <ion-item class="ion-no-padding" lines="none">
+    <h4 slot="start" class="name_title">New Arrivals</h4>
+    <ion-label class="ion-no-padding" style="color: #060dd9;" slot="end">View All</ion-label>
+  </ion-item>
+
+  <swiper [slidesPerView]="2" [spaceBetween]="10">
+     <ng-template *ngFor="let product of products| slice:0:5;" swiperSlide>
+        <ion-card class="ion-no-padding home_card" style="box-shadow: none;">   
+          <ion-img class="img" src="/assets/products/headphone-0.png" alt=""></ion-img>
+          <ion-card-content>
+            <!-- <div class="product_rating">
+              <ion-icon name="star" class="star_icon"></ion-icon>
+              <ion-icon name="star" class="star_icon"></ion-icon>
+              <ion-icon name="star" class="star_icon"></ion-icon>
+              <ion-icon name="star" class="star_icon"></ion-icon>
+              <ion-icon name="star" class="star_icon"></ion-icon>
+            </div> -->
+            <ion-card-title>{{product.productName}}</ion-card-title>
+            <ion-card-subtitle>&#8369; {{product.productPrice}}</ion-card-subtitle>
+          </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+  <ion-item class="ion-no-padding" lines="none">
+    <h4 slot="start" class="name_title">Popular</h4>
+    <ion-label class="ion-no-padding" style="color: #060dd9;" slot="end">View All</ion-label>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row *ngFor="let product of products| slice:0:3;">
+      <ion-col class="img_container" size="3">
+         <ion-img class="img" src="/assets/products/headphone-2.png" alt=""></ion-img>
+      </ion-col>
+      <ion-col size="7">
+          <h4>{{product.productName}}</h4>
+          <p>The most popular product of Beats...</p>
+          <div class="product_rating">
+            <ion-icon name="star" class="star_icon"></ion-icon>
+            <ion-icon name="star" class="star_icon"></ion-icon>
+            <ion-icon name="star" class="star_icon"></ion-icon>
+            <ion-icon name="star" class="star_icon"></ion-icon>
+            <ion-icon name="star" class="star_icon"></ion-icon>
+          </div>
+      </ion-col>
+      <ion-col size="2">
+          <h5>&#8369;{{product.productPrice}}</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

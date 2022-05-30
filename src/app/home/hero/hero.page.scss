@@ -1,0 +1,127 @@
+@import "~swiper/scss";
+@import "~@ionic/angular/css/ionic-swiper";
+
+ion-header {
+  ion-toolbar {
+    font-size: 1.1rem;
+    ion-icon {
+      font-size: 1.5rem;
+    }
+
+    .menu_icon {
+      margin-left: 0.5rem;
+    }
+
+    .notification_icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+ion-content {
+  // --margin-left: 0.75rem;
+  // --margin-right: 0.75rem;
+  h3 {
+    font-weight: 600;
+    color: #737373;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #060dd9;
+    font-weight: 700;
+    margin-top: 0;
+    padding: 0;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
+
+  .swiper {
+    // border-radius: 8px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name_title {
+    margin-left: 0.5rem;
+  }
+
+  // swiper {
+  //   border-radius: 10px;
+  // }
+  ion-card {
+    // background: #d7d8da;
+    background: #ececec;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+
+    ion-card-content {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+
+    ion-card-title {
+      font-size: 1.1rem;
+    }
+
+    ion-card-subtitle {
+      color: #060dd9;
+      font-weight: 700;
+    }
+  }
+
+  ion-img.img {
+    height: 6rem;
+    margin-top: 0.75rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    // transform: rotate(-15deg);
+  }
+
+  .star_icon {
+    color: #ffc420;
+  }
+
+  ion-grid {
+    .img_container {
+      background: #c3c5fd;
+      border-radius: 15px;
+
+      ion-img {
+        height: 4rem;
+        margin: 0px;
+        padding-top: 0.75rem;
+      }
+    }
+
+    ion-row {
+      margin-bottom: 0.5rem;
+    }
+
+    h4,
+    p {
+      margin: 0px;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    h5 {
+      font-size: 0.9rem;
+    }
+  }
+}

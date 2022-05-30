@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label style="font-weight: 600" slot="start">Product Name</ion-label>
+      <ion-label style="font-weight: 600"  slot="end">Category</ion-label>
+    </ion-item>
+    <ion-item
+      routerLink="/home/details-admin/{{product.productId}}"
+      lines="full"
+      *ngFor="let product of products"
+    > 
+      <ion-label> {{product.productName}}</ion-label>
+      <ion-label slot="end">{{product.productCategory}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab id="add-button" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal
+    trigger="add-button"
+    [breakpoints]="[0.6, 0.8, 1]"
+    [initialBreakpoint]=".8"
+  >
+    <ng-template>
+      <app-add-product></app-add-product>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

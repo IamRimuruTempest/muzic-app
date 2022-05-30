@@ -1,0 +1,110 @@
+
+
+
+
+<ion-content class="ion-padding">
+
+
+ 
+  <div class="header">
+    <div class="account_image">
+      <ion-img src="/assets/images/user.jpg"></ion-img>
+    </div>
+    <div class="account_data">
+      <h4>{{account.userFirstname}} {{account.userLastname}}</h4>
+      <p><i>{{account.userEmail | emailAsterisk}}</i></p>
+    </div>
+
+  </div>
+
+
+
+  <ion-list class="ion-no-padding">
+    <ion-item lines="none">
+      <ion-icon name="call-outline"></ion-icon>
+      <ion-label position="fixed" >Phone</ion-label>
+      <ion-label slot="end">{{account.userPhone}}</ion-label>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-icon name="location-outline"></ion-icon>
+      <ion-label position="fixed" >Address</ion-label>
+      <ion-label slot="end">{{account.userAddress}}</ion-label>
+    </ion-item>
+ 
+    <ion-item id="change-password-button" lines="none">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-label position="fixed" >Password</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+
+    <ion-item  id="edit-profile" lines="none">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label position="fixed" >Edit Account</ion-label>    
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item> 
+
+     <ion-item routerLink="/home/add-admin" lines="none">
+      <ion-icon name="person-add-outline"></ion-icon>
+      <ion-label position="fixed" >Add Admin</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+
+     <ion-item routerLink="/home/product-category" lines="none">
+      <ion-icon name="list-circle-outline"></ion-icon>
+      <ion-label position="fixed" >Products Category</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-modal
+        trigger="edit-profile"
+        [breakpoints]="[0.6, 0.8, 1]"
+        [initialBreakpoint]="0.58"
+      >
+        <ng-template>
+          <app-edit-profile
+            (dismissed)="dismissModal()"
+            (submitData)="updateProfile($event)"
+          ></app-edit-profile>
+        </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="change-password-button" [breakpoints]="[0.6, 0.8, 1]" [initialBreakpoint]="0.5">
+    <ng-template>
+      <app-change-password
+        (dismissed)="dismissModal()"
+        (submitted)="tryChangePassword($event)"
+      ></app-change-password>
+    </ng-template>
+  </ion-modal>
+
+ <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <ion-label>Help Centre</ion-label>
+        <ion-icon slot="end" color="gray" class="arrow__icon" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="hand-left-outline"></ion-icon>
+        <ion-label>Community Rules</ion-label>
+        <ion-icon slot="end" color="gray" class="arrow__icon" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="headset-outline"></ion-icon>
+        <ion-label>Audiozic Policies</ion-label>
+        <ion-icon slot="end" color="gray" class="arrow__icon" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="play-circle-outline"></ion-icon>
+        <ion-label>About</ion-label>
+        <ion-icon slot="end" color="gray" class="arrow__icon" name="chevron-forward-outline"></ion-icon>
+      </ion-item> 
+      <ion-item lines="none">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+        <ion-icon slot="end" color="gray" class="arrow__icon" name="chevron-forward-outline" (click)="presentAlertConfirm()"></ion-icon>
+      </ion-item> 
+    </ion-list>
+</ion-content>

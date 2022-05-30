@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="admin/product-admin" [icon]="add"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="details__container">
+    
+    <div class="details__img">
+      <ion-img (click)="addUpdateProductImage()" [src]="product.imageUrl ?? '/assets/products/headphone-0.png'"alt=""></ion-img>
+    </div>
+    <div class="details__info">
+      <div class="product__rating"> 
+        <ion-icon name="star" class="star__icon"></ion-icon>
+        <ion-icon name="star" class="star__icon"></ion-icon>
+        <ion-icon name="star" class="star__icon"></ion-icon>
+        <ion-icon name="star" class="star__icon"></ion-icon>
+        <ion-icon name="star" class="star__icon"></ion-icon>
+      </div>
+      <p class="product__name">{{product.productName}}</p>
+      <h5 class="product__price">&#8369;{{product.productPrice}}</h5>
+    </div>
+    <div class="details__contents">
+      <h3>Colors</h3>
+      <div class="details__color">
+        <div class="color__violet"></div>
+        <div class="color__pink"></div>
+        <div class="color__blue"></div>
+      </div>
+      <h3>Details</h3>
+      <div class="details__detail">
+        <p>{{product.productDescription}}</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</ion-content>
+
+<ion-row class="ion-padding">
+  <ion-col size="6" >
+    <ion-button
+    
+     id="editModal"
+      expand="block">
+      <!-- <ion-icon name="create-outline"></ion-icon>
+      &#160; -->
+      Edit Product
+      </ion-button>
+
+      <ion-modal
+        trigger="editModal"
+        [breakpoints]="[0.6, 0.8, 1]"
+        [initialBreakpoint]="0.58"
+      >
+        <ng-template>
+          <app-edit-product
+            [product]="product"
+            (dismissed)="dismissModal()"
+            (submitData)="updateProfile($event)"
+          ></app-edit-product>
+        </ng-template>
+  </ion-modal>
+
+  </ion-col>
+  <ion-col size="6">
+    <ion-button (click)="deleteNote()"  fill="outline" color="danger"  expand="block">
+      <!-- <ion-icon name="trash-outline"></ion-icon>
+      &#160; -->
+      Delete Product
+      </ion-button>
+  </ion-col>
+</ion-row>

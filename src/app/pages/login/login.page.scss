@@ -1,0 +1,108 @@
+ion-content {
+  font-family: Poppins !important;
+
+  ion-img {
+    height: 100px;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  ion-item {
+    overflow: visible;
+    margin-bottom: 1rem;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0px;
+  }
+
+  h2 {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #060dd9;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    // margin-top: 4rem;
+    margin-bottom: 0;
+    color: #060dd9;
+  }
+
+  h3 {
+    color: #9e9fab;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .input_password {
+    position: relative;
+
+    ion-icon {
+      position: absolute;
+      right: 0;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .forgot_password {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    color: #444444;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  ion-button {
+    --box-shadow: none;
+    --padding-start: 0;
+    --border-radius: 10px;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .login_button {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .google_button {
+    --background: #c8cacf;
+    color: #123681;
+    text-transform: initial;
+    font-size: 0.9rem;
+    ion-icon {
+      font-size: 1rem;
+    }
+  }
+
+  .link_text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #060dd9;
+    }
+  }
+}

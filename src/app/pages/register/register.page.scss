@@ -1,0 +1,94 @@
+ion-content {
+  ion-img {
+    height: 100px;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  ion-item {
+    overflow: visible;
+    margin-bottom: 1rem;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0px;
+  }
+
+  h2 {
+    // margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #060dd9;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    // margin-top: 2rem;
+    margin-bottom: 0;
+    color: #060dd9;
+  }
+
+  h3 {
+    color: #9e9fab;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .input_password {
+    position: relative;
+
+    ion-icon {
+      position: absolute;
+      right: 0;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .check_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  ion-button {
+    --box-shadow: none;
+    --padding-start: 0;
+    --border-radius: 10px;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .validation_error {
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .link_text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #060dd9;
+    }
+  }
+}

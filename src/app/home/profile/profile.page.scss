@@ -1,0 +1,78 @@
+ion-content {
+  --background: #060dd9;
+  --color: #fff;
+
+  ion-list {
+    --ion-background-color: #060dd9;
+  }
+
+  ion-item {
+    --ion-background-color: #060dd9;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0px;
+    color: #fff;
+  }
+
+  ion-img::part(image) {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+  }
+
+  .header {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .account_data {
+    h4 {
+      margin: 2rem 0 0 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  ion-icon {
+    color: #fff;
+    margin-right: 0.5rem;
+  }
+}
+
+ion-modal {
+  --border-radius: 25px 25px 0px 0px;
+}
+
+ion-modal.password_modal {
+  --height: 500px;
+  --max-height: 500px;
+}
+
+ion-modal.account_modal {
+  --height: 600px;
+  --max-height: 600px;
+}
+
+// ion-buttons {
+//   background-color: #060dd9;
+// }
+
+ion-button {
+  text-transform: initial;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #060dd9;
+}
+
+.font_icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}

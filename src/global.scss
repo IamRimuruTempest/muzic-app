@@ -1,0 +1,169 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import "~swiper/scss";
+@import "~@ionic/angular/css/ionic-swiper";
+
+@import "~swiper/scss";
+@import "~swiper/scss/autoplay";
+@import "~swiper/scss/keyboard";
+@import "~swiper/scss/pagination";
+@import "~swiper/scss/scrollbar";
+@import "~swiper/scss/zoom";
+@import "~@ionic/angular/css/ionic-swiper";
+
+@import "./theme//fonts.scss";
+
+// prettier-ignore
+// @import '~swiper/swiper-bundle';
+
+// * {
+//   font-family: Poppins !important;
+// }
+
+// * {
+//   font-family: Montserrat !important;
+// }
+
+* {
+  font-family: Roboto !important;
+}
+
+.item-input {
+  margin-top: 5px;
+  &.invalid {
+    color: #3880ff;
+  }
+}
+
+ion-label.label_name {
+  color: #000;
+  background-color: #fff;
+  font-size: 12px;
+  margin-left: 10px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  position: absolute !important;
+  margin-bottom: 10px !important;
+  z-index: 9;
+}
+
+ion-input.input_name {
+  padding-top: 10px !important;
+  color: #000;
+  border: 2px solid #444444;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10px !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: Poppins !important;
+}
+
+.item-label-floating {
+  &.ion-invalid.ion-touched {
+    .label_name {
+      color: red !important;
+    }
+  }
+  &.ion-invalid.ion-touched {
+    .icon_eye {
+      color: red !important;
+    }
+  }
+  &.ion-invalid.ion-touched {
+    .input_name {
+      border-color: red;
+    }
+  }
+  &.item-has-value {
+    .label_name {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+      color: #060dd9 !important;
+      -webkit-transform: translate3d(0, -50%, 0) !important;
+      transform: translate3d(0, -50%, 0) !important;
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      &.danger {
+        color: peru !important;
+      }
+    }
+
+    &.ion-valid.ion-touched {
+      .label_name {
+        color: #000 !important;
+      }
+    }
+  }
+  &.item-has-focus {
+    .label_name {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+      color: #060dd9 !important;
+      -webkit-transform: translate3d(0, -50%, 0) !important;
+      transform: translate3d(0, -50%, 0) !important;
+      -webkit-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+        -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      &.danger {
+        color: #000 !important;
+      }
+    }
+    .input_name {
+      border: 2px solid #060dd9;
+    }
+    &.ion-valid.ion-touched {
+      .label_name {
+        color: #060dd9 !important;
+      }
+    }
+    &.ion-valid.ion-touched {
+      .icon_eye {
+        color: #060dd9 !important;
+      }
+    }
+  }
+}

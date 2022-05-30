@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-padding" >
+    <ion-title>My Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+    <ion-card *ngFor="let order of cartUserDetailed" style="box-shadow: none;" class="ion-no-padding">
+      <ion-card-content class="ion-no-padding">
+        <div class="img">
+          <ion-img [src]="order.imageUrl" alt=""></ion-img>
+        </div>
+        <div class="info">
+          <h3 class="product_name">{{order.productName}}</h3>
+          <h5 class="product_price">&#8369;{{order.productPrice}}</h5>
+          <h5 class="product_color">{{order.productColor}}</h5>
+          <h5 class="product_quantity">Qty:&nbsp;{{order.quantity}}</h5>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+
+    <div id="textInfoOrder" class="textInfo">
+      <div>
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <h4>Nothing to see here - yet</h4>
+        <p>We'll store your purchases here as <br>
+        soon as you makes them.</p>
+      </div>
+    </div>
+  
+</ion-content>
+
+<ion-footer id="footerOrder" class="ion-no-padding">
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label>Subtotal</ion-label>
+      <ion-label slot="end">&#8369;{{cartPrice}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Shipping Cost</ion-label>
+      <ion-label slot="end">&#8369; {{shippingCost}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Total</ion-label>
+  <ion-label slot="end">&#8369;{{totalPrice}}</ion-label>
+    </ion-item>
+   
+  </ion-list>
+
+  <ion-button (click)="removeOrderItem(cart)" color="danger" expand="full">Cancel Order</ion-button>
+   
+</ion-footer>
+

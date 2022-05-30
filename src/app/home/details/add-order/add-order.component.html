@@ -1,0 +1,38 @@
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item lines="full">
+      <ion-label position="fixed">Product</ion-label>
+      <ion-label slot="end">{{product.productName}}</ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="fixed">Price</ion-label>
+      <ion-label slot="end">{{product.productPrice}}</ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="fixed">Color</ion-label>
+      <ion-select slot="end"  placeholder="Select Color">
+        <ion-select-option value="black">Black</ion-select-option>
+        <ion-select-option value="white">White</ion-select-option>
+        <ion-select-option value="gray">Gray</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+        <ion-select-option value="red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="fixed">Quantity</ion-label>
+      <ion-icon (click)="clickDown()" slot="end" name="chevron-back-outline"></ion-icon>
+      <ion-label slot="end">{{quantity}}</ion-label>
+      <ion-icon  (click)="clickUp()" slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-buttons >
+    <ion-button (click)="addToOrder()" expand="block">
+    Buy Now
+    </ion-button>
+  </ion-buttons>
+  
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header lines="none">
+  <ion-toolbar>
+    <ion-title>Add Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+ <ion-item>
+      <ion-label position="floating">Product Name</ion-label>
+      <ion-input [(ngModel)]="product.productName"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Product Price</ion-label>
+      <ion-input [(ngModel)]="product.productPrice"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="product.productCategory" placeholder="Select One">
+        <ion-select-option value="Headphone">Headphone</ion-select-option>
+        <ion-select-option value="Earbuds">EarBuds</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Color</ion-label>
+      <ion-select [(ngModel)]="product.productColor" placeholder="Select One">
+        <ion-select-option value="Black">Black</ion-select-option>
+        <ion-select-option value="White">White</ion-select-option>
+        <ion-select-option value="Gray">Gray</ion-select-option>
+        <ion-select-option value="Blue">Blue</ion-select-option>
+        <ion-select-option value="Red">Red</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea placeholder="Product Description" [(ngModel)]="product.productDescription"></ion-textarea>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-button (click)="openImagePicker()">Add Image</ion-button>
+    </ion-item> -->
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click)="submitProduct()"> Submit</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  
+  
+
+</ion-content>

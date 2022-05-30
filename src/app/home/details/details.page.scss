@@ -1,0 +1,143 @@
+ion-header {
+  ion-toolbar {
+    font-size: 1.1rem;
+    ion-icon {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+ion-content {
+  .product_card {
+    margin: 0px;
+    --background: #e8ecef;
+    border-radius: 15px;
+    .img_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+
+      .arrow_icon {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        background: #e8ecef;
+        padding: 0.5rem;
+        border-radius: 50%;
+      }
+
+      .img_shape {
+        height: 240px;
+        width: 100%;
+        position: relative;
+        transform: rotate(-15deg);
+        margin-top: 0.75rem;
+      }
+
+      .img_product {
+        position: absolute;
+        top: 0;
+        height: 250px;
+        width: 250px;
+        // transform: rotate(-5deg);
+      }
+    }
+
+    .product_content {
+      width: 100%;
+      text-align: center;
+      color: #000;
+      margin-bottom: 1.5rem;
+      .product_title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0px;
+      }
+
+      .product_price {
+        font-weight: 600;
+        color: #060dd9;
+        margin: 0px;
+      }
+
+      .star_icon {
+        color: #ffc420;
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+
+    .details_description {
+      background: #e8ecef;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 15px;
+      .details_title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        margin-top: 0px;
+      }
+
+      .details__color {
+        margin-bottom: 1rem;
+        column-gap: 0.5rem;
+        display: flex;
+        div {
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+        }
+
+        .color_small {
+          height: 15px;
+          width: 15px;
+          text-align: center;
+          align-self: center;
+        }
+
+        .color__violet {
+          background-color: violet;
+        }
+
+        .color__pink {
+          background-color: pink;
+        }
+
+        .color__blue {
+          background-color: #060dd9;
+        }
+      }
+
+      .details__detail {
+        p {
+          font-size: 1rem;
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  // ion-button {
+  //   height: 3.5rem;
+  //   font-size: 1rem;
+  // }
+
+  // ion-modal {
+  //   --border-radius: 10px;
+  // }
+}
+
+.buy_btn {
+  height: 3.5rem;
+  font-size: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+ion-modal {
+  --border-radius: 15px;
+}
